@@ -5,6 +5,8 @@
 	<title>Abbas Hodroj</title>
 	<link href="https://fonts.googleapis.com/css?family=Leckerli+One|Rock+Salt|Alex+Brush|Sue+Ellen+Francisco|Krona+One|Raleway:400,700,700i" rel="stylesheet"> 
 	<link rel="stylesheet" href="css/styles.css">
+    <script src="jquery/jquery-3.1.1.min.js"></script>
+    <script src="jquery/jquery.countdown.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -29,7 +31,7 @@
             <p>Som Frontend-utvecklare arbetar man med det som syns på en webbplats. Det gäller att skapa så logiska och effektiva koder för att göra sidorna enkla, lättlästa, snabbladdade och användarvänliga som möjligt. Sidorna ska kunna fungera lika bra oavsett om man använder en webbläsare, smartphone eller surfplatta. I nu läget studerar jag till detta på KYH Yrkeshögskola på Odenplan. Här nedan kan du se hur lång tid jag har kvar till min LIA samt examen. LIA betyder lärande i arbete och innebär att en del av utbildningen är förlagd ute på en arbetsplats.</p>
             <div id="main-countdown">
                 <h2 class="title-lia-graduation">Tid kvar till LIA</h2>
-                <div id="countdown" >
+                <div id="countdown" data-countdown="2019/01/01" >
                     <table id="on-lia" cellspacing="4" cellpadding="0" border="0" align="center">
                     <!-- The cellspacing attribute specifies the space, in pixels, between cells.
                     The cellpadding attribute specifies the space, in pixels, between the cell wall and the cell content.
@@ -46,11 +48,11 @@
                         </tr>
                     </table>
                 </div>
-                
+
                 <img id="profile-photo" src="img/abbas.jpg" alt="Photo of Abbas">
 
                 <h2 class="title-lia-graduation">Tid kvar till Examen</h2>
-                <div id="countdown" >
+                <div id="countdown" data-countdown="2018/01/01" >
                     <table id="graduated" cellspacing="4" cellpadding="0" border="0" align="center">
                         <tr>
                             <td class="numbers" id="dday2"></td>       
@@ -80,6 +82,7 @@
     </footer>
 
     <script src="js/countdown.js"></script>
+
 
 </body>
 </html>

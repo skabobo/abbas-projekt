@@ -1,7 +1,24 @@
 /********************************
 COUNTDOWN
 *********************************/
-(function start() {
+
+$('[data-countdown]').each(function() {
+  var $this = $(this), finalDate = $(this).data('countdown');
+  $this.countdown(finalDate, function(event) {
+    $this.html(event.strftime('%D days %H:%M:%S'));
+  });
+});
+
+/*$('[data-countdown]').each(function() {
+  var $this = $(this), finalDate = $(this).data('countdown');
+  $this.countdown(finalDate, function(event) {
+    $this.html(event.strftime('%D days %H:%M:%S'));
+  });
+});*/
+
+
+
+/*(function start() {
 	v = setInterval(mytimer, 1); //för att timern ska köras direkt.
     v = setInterval(mytimer, 1000); //för att inte belasta datorn för mycket.
     x = setInterval(mytimer2, 1)
@@ -53,4 +70,4 @@ function getTime(endtime) {
 		'minutes': minutes,
 		'seconds': seconds
     };
-}
+}*/

@@ -173,6 +173,7 @@ HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM
     background-color: #000; 
     margin: 0px auto;
     position: relative;    /* Relative för att ha timern centrerad på sidan*/
+    color: #fff;
 }
 
 #graduated, #on-lia {
@@ -394,14 +395,14 @@ OM MIG
 		text-align: left;
 	}
 
-	.info-public>img {
+	/*.info-public>img {
 		display: none;
 	}
 
 	.tap-hidden>img {
 		display: inline-block;
 		margin: 0;
-	}
+	}*!
 
 
 /********************************

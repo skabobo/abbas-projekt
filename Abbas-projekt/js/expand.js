@@ -2,7 +2,18 @@
 EXPAND
 *********************************/
 
-var hiddens = document.getElementsByClassName('hidden');
+$(document).ready(function () {
+    $('.hidden').hide();
+    $('.info-image').click(function () {
+        // .parent() selects the A tag, .next() selects the P tag
+        $(this).parent().next().slideToggle(200);
+    });
+    $('.hidden').slideUp(200);
+});
+
+
+
+/*var hiddens = document.getElementsByClassName('hidden');
 var buttons = document.getElementsByClassName("info-image");
 for (var i = 0; i < buttons.length; i++) {
     var v = buttons[i];
@@ -18,4 +29,4 @@ function func() {
     } else {
         h.display = 'block';
     }
-}
+}*/
