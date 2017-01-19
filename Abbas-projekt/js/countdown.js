@@ -2,21 +2,26 @@
 COUNTDOWN
 *********************************/
 
-$('[data-countdown]').each(function() {
-  var $this = $(this), finalDate = $(this).data('countdown');
-  $this.countdown(finalDate, function(event) {
-    $this.html(event.strftime('%D days %H:%M:%S'));
-  });
-});
-
-/*$('[data-countdown]').each(function() {
-  var $this = $(this), finalDate = $(this).data('countdown');
-  $this.countdown(finalDate, function(event) {
-    $this.html(event.strftime('%D days %H:%M:%S'));
-  });
-});*/
+getDaysAndHours("2018-01-15","#dday", "#dhour");//Visar tiden direkt
+setInterval( ()=>{ getDaysAndHours("2018-01-15","#dday", "#dhour"); },1000*60)
 
 
+getDaysAndHours("2018-05-31","#dday2", "#dhour2");//Visar tiden direkt
+setInterval( ()=>{ getDaysAndHours("2018-05-31","#dday2", "#dhour2"); },1000*60)
+
+ //Upprepa rad 5-6 med en annan sluttid
+    function getDaysAndHours(target, days, hours)
+    {
+       var today=new Date();
+       var endDate=new Date(target);
+       var diff=(endDate-today)/1000;
+       diff=diff/3600; //timmar
+      var dagar=diff/24;// dagar
+     timmar=diff- parseInt(dagar)*24;
+
+    $(days).html(parseInt(dagar));
+    $(hours).html(parseInt(timmar));
+    }
 
 /*(function start() {
 	v = setInterval(mytimer, 1); //för att timern ska köras direkt.
@@ -34,9 +39,12 @@ function mytimer() {
     	clearInterval(v); //Stoppa timern
         document.getElementById("on-lia").innerHTML = "I'm on my LIA!";
     }
-        
-	document.getElementById("dday").innerHTML = obj.days;
-	document.getElementById("dhour").innerHTML = obj.hours;
+  //jQUERY
+  $("#dday").html(obj.days);
+  $("#dhour").html(obj.hours);
+
+	//document.getElementById("dday").innerHTML = obj.days;
+	//document.getElementById("dhour").innerHTML = obj.hours;
 	//document.getElementById("dmin").innerHTML = obj.minutes;
 	//document.getElementById("dsec").innerHTML = obj.seconds;
 }
@@ -50,8 +58,12 @@ function mytimer2() {
 		document.getElementById("graduated").innerHTML = "Graduated!";
 	}
 
-	document.getElementById("dday2").innerHTML = obj.days;
-	document.getElementById("dhour2").innerHTML = obj.hours;
+  //jQUERY
+  $("#dday2").html(obj.days);
+  $("#dhour2").html(obj.hours);
+
+	//document.getElementById("dday2").innerHTML = obj.days;
+	//document.getElementById("dhour2").innerHTML = obj.hours;
 	//document.getElementById("dmin2").innerHTML = obj.minutes;
 	//document.getElementById("dsec2").innerHTML = obj.seconds;
 }
@@ -71,3 +83,6 @@ function getTime(endtime) {
 		'seconds': seconds
     };
 }*/
+
+
+

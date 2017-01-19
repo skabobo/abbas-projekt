@@ -256,7 +256,7 @@ OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG
 KONTAKT KONTAKT KONTAKT KONTAKT KONTAKT KONTAKT KONTAKT KONTAKT KONTAKT KONTAKT   
 *******************************************************************************/
 
-#contact-title {
+.contact-title {
 	text-align: center;
 	font-size: 1.8em;
 }
@@ -289,6 +289,113 @@ a .contact-image:hover {
 	transition: all 1s ease;
 }
 
+
+/*************** CONTACT FORM ***************/
+
+#form-main {
+	width:100%;
+}
+
+#form-div {
+	background-color: #3c3c3c;
+	padding: 35px 35px 50px;
+	width: 600px;
+	margin: 40px auto;
+}
+
+.feedback-input {
+	color: #000;
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	background-color: #fff;
+    border: 3px solid #fff;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.feedback-input:focus {
+	background: #ffdb99;
+	border: 3px solid #000;
+	color: #000;
+	outline: none;
+    padding: 13px 13px 13px 54px;
+}
+
+
+/************* Contact Form Icons ************/
+
+#name {
+	background-image: url(../img/name-form.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+
+#phone {
+	background-image: url(../img/phone-form.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+
+#email {
+	background-image: url(../img/email-form.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#comment {
+	background-image: url(../img/message-form.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+	line-height: 150%;
+}
+
+input:focus, textarea:focus {
+	background-color: #ffdb99;
+}
+
+#button-green {
+	font-family: 'Raleway', sans-serif;
+	width: 100%;
+	border: #000 solid 3px;
+	cursor: pointer;
+	background-color: #85c7bd;
+	color: #000;
+	font-size: 24px;
+	font-weight: bold;
+	padding-top: 22px;
+	padding-bottom: 22px;
+}
+
+#button-green:hover {
+	background-color: #34A391;
+	color: #000;
+}
 
 
 /*******************************************************************************
@@ -414,6 +521,12 @@ KONTAKT
 		display: block;
 	}
 
+	#form-div {
+		width: 88%;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+
 
 } /************* MAX-WIDTH 820PX: SLUT *******************/
 
@@ -426,14 +539,4 @@ KONTAKT
 	}
 
 } /************* MAX-WIDTH 400PX: SLUT *******************/
-
-
-
-
-
-
-
-
-
-
-
+	

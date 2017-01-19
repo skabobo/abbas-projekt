@@ -1,28 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Abbas Hodroj</title>
-	<link href="https://fonts.googleapis.com/css?family=Leckerli+One|Rock+Salt|Alex+Brush|Sue+Ellen+Francisco|Krona+One|Raleway:400,700,700i" rel="stylesheet"> 
-	<link rel="stylesheet" href="css/styles.css">
-    <script src="jquery/jquery-3.1.1.min.js"></script>
-    <script src="jquery/jquery.countdown.min.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<!--############### HEADER ##############-->
-    <header>
-        <a href="index.html"><img src="img/abbas.logo.png" id="logo"></a>
-		<nav>
-            <a href="#" id="menu-icon"></a>
-            <ul>
-                <li><a href="index.html" class="current">Hem</a></li>
-				<li><a href="about.html">Om Mig</a></li>
-				<li><a href="contact.html">Kontakt</a></li>
-			</ul>
-        </nav>
-    </header>
-<!--############### HEADER SLUT ##############-->
     <div class="content"> <!-- Div för sticky footer -->
         <section class ="main-section">
             <h1 id="main-title">Abbas Hodroj</h1>
@@ -70,19 +45,9 @@
         </section>
     </div> <!--######## div content ########-->
 
-    <footer>
-		<p>Dela denna sida!</p>
-		<ul class="share-buttons">
-            <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.abbashodroj.se&t=" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="img/Facebook.png"></a></li>
-            <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fwww.abbashodroj.se&text=:%20http%3A%2F%2Fwww.abbashodroj.se" target="_blank" title="Tweet"><img alt="Tweet" src="img/Twitter.png"></a></li>
-            <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.abbashodroj.se" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="img/Google+.png"></a></li>
-            <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.abbashodroj.se&title=&summary=&source=http%3A%2F%2Fwww.abbashodroj.se" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="img/LinkedIn.png"></a></li>
-		</ul>
-        <p>&copy; 2016 Abbas Hodroj</p>
-    </footer>
+    <?php include('footer.php'); ?>
 
     <script src="js/countdown.js"></script>
-
 
 </body>
 </html>
