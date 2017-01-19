@@ -2,12 +2,12 @@
 COUNTDOWN
 *********************************/
 
-getDaysAndHours("2018-01-15","#dday", "#dhour");//Visar tiden direkt
-setInterval( ()=>{ getDaysAndHours("2018-01-15","#dday", "#dhour"); },1000*60)
+getDaysAndHours("2016-01-15","#dday", "#dhour");//Visar tiden direkt
+var a = setInterval( ()=>{ getDaysAndHours("2016-01-15","#dday", "#dhour"); },1000*60)
 
 
 getDaysAndHours("2018-05-31","#dday2", "#dhour2");//Visar tiden direkt
-setInterval( ()=>{ getDaysAndHours("2018-05-31","#dday2", "#dhour2"); },1000*60)
+var b = setInterval( ()=>{ getDaysAndHours("2018-05-31","#dday2", "#dhour2"); },1000*60)
 
  //Upprepa rad 5-6 med en annan sluttid
     function getDaysAndHours(target, days, hours)
@@ -18,6 +18,11 @@ setInterval( ()=>{ getDaysAndHours("2018-05-31","#dday2", "#dhour2"); },1000*60)
        diff=diff/3600; //timmar
       var dagar=diff/24;// dagar
      timmar=diff- parseInt(dagar)*24;
+
+         if(days<=0 && hours<=0)  {
+      clearInterval(a); //Stoppa timern
+        document.getElementById("on-lia").innerHTML = "I'm on my LIA!";
+    }
 
     $(days).html(parseInt(dagar));
     $(hours).html(parseInt(timmar));

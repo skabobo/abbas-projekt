@@ -210,6 +210,11 @@ OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG
 	margin-bottom: 20px;
 }
 
+#youtube-video {
+	width: 100%; 
+	height: 315px; 
+}
+
 .work {
 	width: 49.7%;
 	display: inline-table;
