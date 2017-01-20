@@ -1,3 +1,7 @@
+<?php 
+	include('connect.php');
+?>
+
 <div class="content"> <!-- Div för sticky footer -->
 		<section class ="main-section">
 			<h1 class="contact-title">KONTAKTA MIG</h1>
@@ -39,14 +43,6 @@
 </div>
 
 <?php
-
-// Create connection
-$conn = mysqli_connect("localhost", "root", "", "abbashodroj");
-
-// Check connection
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
 
 if  (isset($_POST['form_name'])
 && isset($_POST['form_phone'])

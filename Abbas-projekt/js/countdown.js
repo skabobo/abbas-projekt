@@ -2,8 +2,8 @@
 COUNTDOWN
 *********************************/
 
-getDaysAndHours("2016-01-15","#dday", "#dhour");//Visar tiden direkt
-var a = setInterval( ()=>{ getDaysAndHours("2016-01-15","#dday", "#dhour"); },1000*60)
+getDaysAndHours("2018-01-15","#dday", "#dhour");//Visar tiden direkt
+var a = setInterval( ()=>{ getDaysAndHours("2018-01-15","#dday", "#dhour"); },1000*60)
 
 
 getDaysAndHours("2018-05-31","#dday2", "#dhour2");//Visar tiden direkt
