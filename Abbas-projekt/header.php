@@ -17,6 +17,7 @@
             <ul>
                 <li><a href="index.php?page=home">Hem</a></li>
 				<li><a href="index.php?page=about">Om Mig</a></li>
+				<li><a href="index.php?page=portfolio">Portfolio</a></li>
 				<li><a href="index.php?page=contact">Kontakt</a></li>
 			</ul>
         </nav>

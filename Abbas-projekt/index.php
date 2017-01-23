@@ -15,6 +15,10 @@
                 include ('about.php');
                 break;
 
+            case 'portfolio':
+                include ('portfolio.php');
+                break;
+
             case 'contact':
                 include ('contact.php');
                 break;

@@ -95,14 +95,14 @@ a:hover#menu-icon {
 
 ul {	
 	list-style: none;
-	font-size: 1.1em;
+	font-size: 1.05em;
 	padding: 0; /* skriva över user agent stylesheet, har en padding-left på 40px*/
 	margin-right: 20px;	
 }
 
 li {
 	display: inline-block;
-	padding: 28px 20px;
+	padding: 30px 20px 0;
 }
 
 
@@ -255,6 +255,59 @@ OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG
 .tap-hidden>img {
 	display: none;
 }
+
+
+/*******************************************************************************
+PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO
+*******************************************************************************/
+
+.portfolio-title {
+	text-align: center;
+	font-size: 1.8em;
+	border-bottom: 1px solid #000;
+	padding-bottom: 4px;
+}
+
+.bajs {
+	display: inline-table;
+	width: 49.7%;
+}
+
+.portfolio-div {
+	display: inline-table;
+	width: 100%; 
+	height: 280px; 
+	background-color: blue;
+}
+
+#f1_container {
+  position: relative;
+  margin: 10px auto;
+  width: 450px;
+  height: 281px;
+  z-index: 1;
+}
+#f1_container {
+  perspective: 1000;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: #aaa;
+}
+
 
 
 /*******************************************************************************
@@ -515,6 +568,20 @@ OM MIG
 		display: inline-block;
 		margin: 0;
 	}*!
+
+/********************************
+PORTFOLIO
+*********************************/
+
+.bajs {
+	display: block;
+	width: 100%;
+}
+
+.portfolio-div {
+	display: block;
+	width: 100%; 
+}
 
 
 /********************************

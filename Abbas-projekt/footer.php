@@ -6,5 +6,5 @@
             <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.abbashodroj.se" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="img/Google+.png"></a></li>
             <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.abbashodroj.se&title=&summary=&source=http%3A%2F%2Fwww.abbashodroj.se" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="img/LinkedIn.png"></a></li>
 		</ul>
-        <p>&copy; 2016 Abbas Hodroj</p>
+        <p>&copy; 2017 Abbas Hodroj</p>
     </footer>
