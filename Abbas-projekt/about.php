@@ -16,37 +16,21 @@
 				<!--<div class="tap-hidden"><img class="info-image" alt="info-button" src="img/tap.png" id="0"></div>-->  
 				<div class="hidden">
 
-				    <?php 
-                        $query = "SELECT * FROM text_table WHERE id=1";
-                        $pages_result = mysqli_query($conn, $query);
-						$page = mysqli_fetch_assoc($pages_result); 
-                    ?> 
-					<h3><?php echo $page['heading_text']; ?></h3>
-					<p><?php echo $page['page_content']; ?></p>
-<!--*************************************************************************************************-->
-				    <?php 
-                        $query = "SELECT * FROM text_table WHERE id=2";
-                        $pages_result = mysqli_query($conn, $query);
-						$page = mysqli_fetch_assoc($pages_result); 
-                    ?> 
-					<h3><?php echo $page['heading_text']; ?></h3>
-					<p><?php echo $page['page_content']; ?></p>
-<!--*************************************************************************************************-->
-				    <?php 
-                        $query = "SELECT * FROM text_table WHERE id=3";
-                        $pages_result = mysqli_query($conn, $query);
-						$page = mysqli_fetch_assoc($pages_result); 
-                    ?> 
-					<h3><?php echo $page['heading_text']; ?></h3>
-					<p><?php echo $page['page_content']; ?></p>
-<!--*************************************************************************************************-->
-				    <?php 
-                        $query = "SELECT * FROM text_table WHERE id=4";
-                        $pages_result = mysqli_query($conn, $query);
-						$page = mysqli_fetch_assoc($pages_result);  
-                    ?> 
-					<h3><?php echo $page['heading_text']; ?></h3>
-					<p><?php echo $page['page_content']; ?></p>
+					<?php 
+						$query = "SELECT * FROM education_table";
+						$pages_result = mysqli_query($conn, $query);
+
+						while($page = mysqli_fetch_assoc($pages_result)){
+							echo '
+								<h3>'.$page['heading_text'].'</h3>
+								<h3 class="cv-year">'.$page['heading_year'].'</h3>
+								<p>'.$page['page_content'].'</p>
+
+
+							';
+						}
+
+					?>
     			</div><!--######## div hidden #########-->
     		</div><!--######## div work #########-->
 			
@@ -55,37 +39,23 @@
 				<div class="info-public"><img class="info-image" alt="info-button" src="img/info.png" id="1"></div>
 				<!--<div class="tap-hidden"><img class="info-image" alt="info-button" src="img/tap.png" id="1"></div>-->  
 				<div class="hidden">	
-				    <?php 
-                        $query = "SELECT * FROM text_table WHERE id=5";
-                        $pages_result = mysqli_query($conn, $query);
-						$page = mysqli_fetch_assoc($pages_result); 
-                    ?> 
-					<h3><?php echo $page['heading_text']; ?></h3>
-					<p><?php echo $page['page_content']; ?></p>
-<!--*************************************************************************************************-->
-				    <?php 
-                        $query = "SELECT * FROM text_table WHERE id=6";
-                        $pages_result = mysqli_query($conn, $query);
-						$page = mysqli_fetch_assoc($pages_result); 
-                    ?> 
-					<h3><?php echo $page['heading_text']; ?></h3>
-					<p><?php echo $page['page_content']; ?></p>
-<!--*************************************************************************************************-->
-				    <?php 
-                        $query = "SELECT * FROM text_table WHERE id=7";
-                        $pages_result = mysqli_query($conn, $query);
-						$page = mysqli_fetch_assoc($pages_result); 
-                    ?> 
-					<h3><?php echo $page['heading_text']; ?></h3>
-					<p><?php echo $page['page_content']; ?></p>
-<!--*************************************************************************************************-->
-				    <?php 
-                        $query = "SELECT * FROM text_table WHERE id=8";
-                        $pages_result = mysqli_query($conn, $query);
-						$page = mysqli_fetch_assoc($pages_result);  
-                    ?> 
-					<h3><?php echo $page['heading_text']; ?></h3>
-					<p><?php echo $page['page_content']; ?></p>
+
+					<?php 
+						$query = "SELECT * FROM job_table";
+						$pages_result = mysqli_query($conn, $query);
+
+						while($page = mysqli_fetch_assoc($pages_result)){
+							echo '
+								<h3>'.$page['heading_text'].'</h3>
+								<h3 class="cv-year">'.$page['heading_year'].'</h3>
+								<p>'.$page['page_content'].'</p>
+
+
+							';
+						}
+
+					?>
+					
 			</div><!--######## div work #########-->
 		</section>
 	</div> <!--######## div content ########-->
