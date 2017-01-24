@@ -388,11 +388,17 @@ KONTAKT
 
 } /************* MAX-WIDTH 400PX: SLUT *******************/
 
-
+#text-home {
+	font-size: 1em;
+	line-height: 1.5em;
+	height: 100px;
+	width: 100%;
+}
 
 	
 #text-aboutme {
 	font-size: 1em;
+	line-height: 1.5em;
 	height: 50px;
 	width: 100%;
 }
@@ -420,6 +426,7 @@ KONTAKT
 
 .text-textarea {
 	font-size: 1em;
+	line-height: 1.5em;
 	height: 50px;
 	width: 88%;
 	margin-top: -10px;
@@ -433,4 +440,14 @@ KONTAKT
     margin-top: 25px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+}
+
+
+.no_editable {
+	text-align: center;
+	font-size: 3em;
+}
+
+.no_editable_section {
+	background-color: gray;
 }

@@ -1,5 +1,7 @@
 <?php
-include('session.php');
+	include('session.php');
+	include('home-textadmin.php');
+
 ?>
 
 
@@ -8,7 +10,17 @@ include('session.php');
             <h1 id="main-title">Abbas Hodroj</h1>
             <h2 id="second-title">Front End Developer</h2>
             <img id="mountain" src="img/berg.jpg" alt="banner">
-            <p>Som Frontend-utvecklare arbetar man med det som syns på en webbplats. Det gäller att skapa så logiska och effektiva koder för att göra sidorna enkla, lättlästa, snabbladdade och användarvänliga som möjligt. Sidorna ska kunna fungera lika bra oavsett om man använder en webbläsare, smartphone eller surfplatta. I nu läget studerar jag till detta på KYH Yrkeshögskola på Odenplan. Här nedan kan du se hur lång tid jag har kvar till min LIA samt examen. LIA betyder lärande i arbete och innebär att en del av utbildningen är förlagd ute på en arbetsplats.</p>
-
+			<?php 
+				$query = "SELECT * FROM home";
+				$pages_result = mysqli_query($db, $query);
+				$page = mysqli_fetch_assoc($pages_result);
+				echo '
+					<form method="POST">
+						<textarea id="text-home" name="home_text">'.$page['page_content'].'</textarea>
+						<input type="hidden" name="id" value="'.$page['id'].'">
+			    		<div class="button-div"><button Id="button-aboutme" type="submit" name="update">Spara</button></div>
+					</form>
+					';
+			?>	
         </section>
     </div> <!--######## div content ########-->
