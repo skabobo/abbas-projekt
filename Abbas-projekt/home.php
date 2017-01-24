@@ -45,9 +45,4 @@
         </section>
     </div> <!--######## div content ########-->
 
-    <?php include('footer.php'); ?>
-
     <script src="js/countdown.js"></script>
-
-</body>
-</html>

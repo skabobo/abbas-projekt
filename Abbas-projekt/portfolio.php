@@ -19,8 +19,3 @@
 			</div>
 		</section>
 	</div> <!--######## div content ########-->
-
-	<?php include('footer.php'); ?>
-
-</body>
-</html>

@@ -2,7 +2,7 @@
 include('admin/login.php'); // Includes Login Script
 
 if(isset($_SESSION['login_user'])){
-header("location: admin/homeadmin.php");
+header("location: admin/indexadmin.php?page=home");
 }
 
 ?>
@@ -24,8 +24,3 @@ header("location: admin/homeadmin.php");
 
 		</section>
 	</div> <!--######## div content ########-->
-
-	<?php include('footer.php'); ?>
-
-</body>
-</html>

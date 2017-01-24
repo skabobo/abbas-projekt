@@ -31,3 +31,5 @@
         include ('homeadmin.php');
     }
 ?>
+
+<?php include('footeradmin.php'); ?>

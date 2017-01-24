@@ -70,9 +70,4 @@
 		</section>
 	</div> <!--######## div content ########-->
 
-	<?php include('footer.php'); ?>
-
 	<script src="js/expand.js"></script>
-
-</body>
-</html>

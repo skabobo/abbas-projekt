@@ -74,8 +74,3 @@ if  (isset($_POST['form_name'])
 
 
 ?>
-
-	<?php include('footer.php'); ?>
-
-</body>
-</html>

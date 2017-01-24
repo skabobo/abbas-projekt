@@ -1,6 +1,5 @@
 <?php
 include('session.php');
-include('headeradmin.php');
 ?>
 
 
@@ -13,7 +12,3 @@ include('headeradmin.php');
 
         </section>
     </div> <!--######## div content ########-->
-
-    <?php include('footeradmin.php'); ?>
-</body>
-</html>

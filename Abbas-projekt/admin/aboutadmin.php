@@ -110,9 +110,4 @@ include('about-textadmin.php');
 		</section>
 	</div> <!--######## div content ########-->
 
-	<?php include('footeradmin.php'); ?>
 	<script src="js/expand.js"></script>
-
-
-</body>
-</html>

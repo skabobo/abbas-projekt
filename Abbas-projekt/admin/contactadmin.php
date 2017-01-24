@@ -18,8 +18,3 @@
 			</div> <!--######## div contact-div ######-->
 		</section>
 	</div> <!-- div content -->
-
-	<?php include('footeradmin.php'); ?>
-
-</body>
-</html>

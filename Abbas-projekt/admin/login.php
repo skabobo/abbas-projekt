@@ -25,7 +25,7 @@ $query = "select * from login where password='$password' AND username='$username
 $rows = mysqli_query($connection, $query);
 if ($rows == 1) {
 $_SESSION['login_user']=$username; // Initializing Session
-header("location: homeadmin.php"); // Redirecting To Other Page
+header("location: indexadmin.php?page=home"); // Redirecting To Other Page
 } else {
 $error = "Användarnamnet eller lösenordet är felaktigt";
 }

@@ -3,7 +3,10 @@ $db = mysqli_connect("localhost", "root", "", "abbashodroj");
 mysqli_query($db, "SET NAMES utf8");
 
 
-// update the text in the database and the adminpage and save it.  
+/********************************************************
+Kod för att uppdatera befintlig text i CV:et
+********************************************************/ 
+
 if(isset($_POST["id"])) {
 	$new_aboutme = mysqli_real_escape_string($db, $_POST['about_me']);
 	$id = mysqli_real_escape_string($db, $_POST['id']);
@@ -12,7 +15,7 @@ if(isset($_POST["id"])) {
 }
 
 
-// update the text in the database and the adminpage and save it.  
+
 if(isset($_POST["id2"])) {
 	$new_heading = mysqli_real_escape_string($db, $_POST['cv-heading']);
 	$new_year = mysqli_real_escape_string($db, $_POST['cv-year']);
@@ -22,7 +25,7 @@ if(isset($_POST["id2"])) {
 	mysqli_query($db, $query);   
 }
 
-// update the text in the database and the adminpage and save it.  
+ 
 if(isset($_POST["id3"])) {
 	$new_heading2 = mysqli_real_escape_string($db, $_POST['cv-heading2']);
 	$new_year2 = mysqli_real_escape_string($db, $_POST['cv-year2']);
@@ -33,7 +36,9 @@ if(isset($_POST["id3"])) {
 }
 
 
-
+/****************************************************************
+Kod för att sätta in ny text i databasen för att visas på CV:et.
+****************************************************************/ 
 
 
 if  (isset($_POST['insert_db_heading'])
@@ -54,6 +59,8 @@ if  (isset($_POST['insert_db_heading'])
 		header("Location: indexadmin.php?page=about");
 	}
 }
+
+
 
 if  (isset($_POST['insert_db_heading2'])
 && isset($_POST['insert_db_year2'])
