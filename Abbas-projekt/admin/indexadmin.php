@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include('headeradmin.php'); ?>
 
 
 <?php
@@ -8,30 +8,26 @@
         switch ($p) {
 
             case 'home':
-                include ('home.php');
+                include ('homeadmin.php');
                 break;
 
             case 'about':
-                include ('about.php');
+                include ('aboutadmin.php');
                 break;
 
             case 'portfolio':
-                include ('portfolio.php');
+                include ('portfolioadmin.php');
                 break;
 
             case 'contact':
-                include ('contact.php');
-                break;
-
-            case 'admin':
-                include ('admin.php');
+                include ('contactadmin.php');
                 break;
 
             default:
-                include ('home.php');
+                include ('homeadmin.php');
                 break; 
         }
     } else {
-        include ('home.php');
+        include ('homeadmin.php');
     }
 ?>

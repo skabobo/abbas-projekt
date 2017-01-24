@@ -8,7 +8,17 @@
 			<h1 class="about-title">Introduktion</h1>
 			<!--<img id="skyline" src="img/skyline.jpg" alt="banner">-->
 			<iframe id="youtube-video" src="https://www.youtube.com/embed/coIXMyWzpAU" frameborder="0" allowfullscreen></iframe>
-			<p>Mitt namn är Abbas Hodroj och i nuläget studerar jag till Frontend-utvecklare på KYH Yrkeshögskola på Odenplan. När jag inte studerar älskar jag att träna på gym.</p>
+			<?php 
+				$query = "SELECT * FROM about_me";
+				$pages_result = mysqli_query($conn, $query);
+
+				while($page = mysqli_fetch_assoc($pages_result)){
+					echo '
+					<p>'.$page['page_content'].'</p>
+					';
+				}
+
+			?>			
 			<h1 class="about-title">CV</h1>
 			<div class="work">
 				<h2 class="info-title">Utbildning</h2> 
@@ -17,7 +27,7 @@
 				<div class="hidden">
 
 					<?php 
-						$query = "SELECT * FROM education_table";
+						$query = "SELECT * FROM education_table ORDER BY heading_year DESC";
 						$pages_result = mysqli_query($conn, $query);
 
 						while($page = mysqli_fetch_assoc($pages_result)){
@@ -41,7 +51,7 @@
 				<div class="hidden">	
 
 					<?php 
-						$query = "SELECT * FROM job_table";
+						$query = "SELECT * FROM job_table ORDER BY heading_year DESC";
 						$pages_result = mysqli_query($conn, $query);
 
 						while($page = mysqli_fetch_assoc($pages_result)){
