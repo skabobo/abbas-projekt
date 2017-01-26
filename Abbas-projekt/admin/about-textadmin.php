@@ -1,7 +1,14 @@
-<?php
+<?php 
+
+// Create connection
 $db = mysqli_connect("localhost", "root", "", "abbashodroj");
+
 mysqli_query($db, "SET NAMES utf8");
 
+// Check connection
+if (mysqli_connect_errno()) {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 
 /********************************************************
 Kod för att uppdatera befintlig text i CV:et
@@ -25,6 +32,17 @@ if(isset($_POST["id2"])) {
 	mysqli_query($db, $query);   
 }
 
+if(isset($_POST["id2"])) {
+	$new_heading_delete = mysqli_real_escape_string($db, $_POST['cv-heading']);
+	$new_year_delete = mysqli_real_escape_string($db, $_POST['cv-year']);
+	$new_text_delete = mysqli_real_escape_string($db, $_POST['cv-text']);
+	$id2_delete = mysqli_real_escape_string($db, $_POST['id2']);
+	$query = "DELETE FROM education_table WHERE id = $id2_delete";
+	mysqli_query($db, $query);
+}
+
+
+
  
 if(isset($_POST["id3"])) {
 	$new_heading2 = mysqli_real_escape_string($db, $_POST['cv-heading2']);
@@ -32,6 +50,15 @@ if(isset($_POST["id3"])) {
 	$new_text2 = mysqli_real_escape_string($db, $_POST['cv-text2']);
 	$id3 = mysqli_real_escape_string($db, $_POST['id3']);
 	$query = "UPDATE job_table SET heading_text = '$new_heading2', heading_year = '$new_year2', page_content = '$new_text2' WHERE id = $id3";
+	mysqli_query($db, $query);   
+}
+
+if(isset($_POST["id3"])) {
+	$new_heading2_delete = mysqli_real_escape_string($db, $_POST['cv-heading2']);
+	$new_year2_delete = mysqli_real_escape_string($db, $_POST['cv-year2']);
+	$new_text2_delete = mysqli_real_escape_string($db, $_POST['cv-text2']);
+	$id3_delete = mysqli_real_escape_string($db, $_POST['id3']);
+	$query = "DELETE FROM job_table WHERE id = $id3_delete";
 	mysqli_query($db, $query);   
 }
 

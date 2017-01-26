@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(session_destroy()) // Destroying All Sessions
-{
+session_destroy(); // Destroying All Sessions
+
 header("Location: ../index.php?page=admin"); // Redirecting To Home Page
-}
+
 ?>

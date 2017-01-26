@@ -1,37 +1,25 @@
+<?php session_start(); // Startar SESSION så vi kan jobba med den ?>
+
+<h1>Adminpanel</h1>
+
 <?php
-session_start(); // Starting Session
-$error=''; // Variable To Store Error Message
-if (isset($_POST['submit'])) {
-if (empty($_POST['username']) || empty($_POST['password'])) {
-$error = "Användarnamnet eller lösenordet är felaktigt";
-}
-else
-{
-
-// Establishing Connection with Server by passing server_name, user_id and password as a parameter
-$connection = mysqli_connect("localhost", "root", "", "abbashodroj");
-// Define $username and $password
-$username=$_POST['username'];
-$password=$_POST['password'];
-
-// To protect from MySQL injection
-$username = stripslashes($username);
-$password = stripslashes($password);
-$username = mysqli_real_escape_string($connection, $username);
-$password = mysqli_real_escape_string($connection, $password);
-$password = md5($password);
-// SQL query to fetch information of registerd users and finds user match.
-$query = "select * from login where password='$password' AND username='$username'";
-$rows = mysqli_query($connection, $query);
-if ($rows == 1) {
-$_SESSION['login_user']=$username; // Initializing Session
-header("location: indexadmin.php?page=home"); // Redirecting To Other Page
-} else {
-$error = "Användarnamnet eller lösenordet är felaktigt";
-}
-mysqli_close($connection); // Closing Connection
-}
+# Om lösenordet skickats kollar vi det och är det rätt sätts vår SESSION till true
+if(isset($_POST['password']) && $_POST['password'] == "abbas"){
+	$_SESSION['admin'] = true;
 }
 
+# Om vi inte har en SESSION som är true får man formuläret för att skriva in lösenord
+if(!isset($_SESSION['admin']) || !$_SESSION['admin']){
+	echo "
+		<form action='' method='post'>
+		Lösenord: <input type='password' name='password'>
+		<input type='submit' value='Logga in'>
+		</form>
+	";
+
+# Annars, om vi har en SESSION som är true, kör vi funktionen rum_admin() som skriver ut vårt admin
+}else{
+	header("location: admin/indexadmin.php?page=home");
+}
 
 ?>

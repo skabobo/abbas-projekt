@@ -1,5 +1,4 @@
 <?php
-include('session.php');
 include('about-textadmin.php');
 
 ?>
@@ -56,6 +55,7 @@ include('about-textadmin.php');
 									<textarea class="text-textarea" name="cv-text">'.$page['page_content'].'</textarea>
 									<input type="hidden" name="id2" value="'.$page['id'].'">
 			    					<div class="button-div"><button class="button-cv" type="submit" name="update">Spara</button></div>
+			    					<div class="button-div"><button onclick="return deleletconfig()" class="button-cv delete-cv" type="submit">Radera</button></div>
 								</form>
 							</div>
 							';
@@ -99,6 +99,7 @@ include('about-textadmin.php');
 									<textarea class="text-textarea" name="cv-text2">'.$page['page_content'].'</textarea>
 									<input type="hidden" name="id3" value="'.$page['id'].'">
 			    					<div class="button-div"><button class="button-cv" type="submit" name="update">Spara</button></div>
+			    					<div class="button-div"><button onclick="return deleletconfig()" class="button-cv delete-cv" type="submit">Radera</button></div>
 								</form>
 							</div>
 							';
@@ -111,3 +112,13 @@ include('about-textadmin.php');
 	</div> <!--######## div content ########-->
 
 	<script src="js/expand.js"></script>
+	<script type="text/javascript">
+		function deleletconfig(){
+
+			var del = confirm("Är du säker på att du vill radera detta?");
+			if (del == true){
+   			header ("Location: indexadmin.php?page=about")
+		}
+			return del;
+		}
+	</script>

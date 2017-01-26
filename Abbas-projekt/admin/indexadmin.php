@@ -1,4 +1,11 @@
-<?php include('headeradmin.php'); ?>
+<?php 
+    include('headeradmin.php');
+    session_start();  
+
+    if( !isset($_SESSION['admin']) ){
+       header("Location: ../index.php?page=admin"); // kod för att inte loggas in i adminsidan när man skriver URL i adressfältet utan kod. 
+    }
+?>
 
 
 <?php

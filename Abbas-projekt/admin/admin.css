@@ -442,6 +442,10 @@ KONTAKT
 	padding-bottom: 5px;
 }
 
+.delete-cv {
+	background-color: red;
+}
+
 
 .no_editable {
 	text-align: center;
