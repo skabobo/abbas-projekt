@@ -52,6 +52,10 @@ h1, h2, h3 {
 	font-family: 'Raleway', sans-serif;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 
 
 /*******************************************************************************
@@ -135,6 +139,13 @@ HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM HEM
 	margin-bottom: 20px;
 }
 
+#text-home {
+	font-size: 1em;
+	line-height: 1.5em;
+	height: 100px;
+	width: 100%;
+}
+
 
 /*******************************************************************************
 OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG   
@@ -148,15 +159,33 @@ OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG
 	padding-bottom: 4px;
 }
 
-#skyline {
-	width: 100%;
-	margin-bottom: 20px;
-}
 
 #youtube-video {
 	width: 100%; 
 	height: 315px; 
 }
+
+#text-aboutme {
+	font-size: 1em;
+	line-height: 1.5em;
+	height: 50px;
+	width: 100%;
+}
+
+.button-div {
+	width: 50%;
+	margin: 0 auto;
+}
+
+#button-aboutme {
+	width: 100%;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
 
 .work {
 	width: 49.7%;
@@ -187,12 +216,39 @@ OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG
 	font-size: 1.3em;
 }
 
-.cv-year {
-	margin-top: -18px;
-}
-
 .info-public {
 	display: inline-block;
+}
+
+.boxtext-cv {
+	margin-bottom: 70px; 
+}
+
+.text-textarea {
+	font-size: 1em;
+	line-height: 1.5em;
+	height: 50px;
+	width: 88%;
+	margin-top: -10px;
+	margin-bottom: -15px;
+}
+
+.text-textarea:focus {
+
+}
+
+
+.button-cv {
+    width: 88%;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.delete-cv {
+	background-color: red;
 }
 
 
@@ -200,44 +256,18 @@ OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG
 PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO
 *******************************************************************************/
 
+.no_editable {
+	text-align: center;
+	font-size: 3em;
+}
+
+.no_editable_section {
+	background-color: gray;
+}
 
 /*******************************************************************************
 KONTAKT KONTAKT KONTAKT KONTAKT KONTAKT KONTAKT KONTAKT KONTAKT KONTAKT KONTAKT   
 *******************************************************************************/
-
-.contact-title {
-	text-align: center;
-	font-size: 1.8em;
-}
-
-.contact a{
-	color: #000;
-}
-
-.contact-div a {
-	color: #000;
-}
-
-.contact-div {
-	margin-top: 60px;
-	width: 33%;
-	display: inline-table;
-	text-align: center;
-}
-
-.contact-image {
-	margin: auto;  
-	opacity: 0.5;      /* #34A391*/ 
-}
-
-a .contact-image:hover {
-	opacity: 1.0;
-	-webkit-transition: all 1s ease; /* Safari and Chrome säkerställa */ 
-	-moz-transition: all 1s ease; /* Firefox säkerställa */
-	-o-transition: all 1s ease; /* Opera säkerställa */
-	transition: all 1s ease;
-}
-
 
 
 /*******************************************************************************
@@ -345,35 +375,18 @@ OM MIG
 	text-align: left;
 }
 
-/********************************
-PORTFOLIO
-*********************************/
-
-.bajs {
-	display: block;
+.text-textarea {
 	width: 100%;
 }
 
-.portfolio-div {
-	display: block;
-	width: 100%; 
-}
+/********************************
+PORTFOLIO
+*********************************/
 
 
 /********************************
 KONTAKT
 *********************************/
-
-	.contact-div {
-		width: 100%;
-		display: block;
-	}
-
-	#form-div {
-		width: 88%;
-		padding-left: 3%;
-		padding-right: 3%;
-	}
 
 
 } /************* MAX-WIDTH 820PX: SLUT *******************/
@@ -388,70 +401,4 @@ KONTAKT
 
 } /************* MAX-WIDTH 400PX: SLUT *******************/
 
-#text-home {
-	font-size: 1em;
-	line-height: 1.5em;
-	height: 100px;
-	width: 100%;
-}
 
-	
-#text-aboutme {
-	font-size: 1em;
-	line-height: 1.5em;
-	height: 50px;
-	width: 100%;
-}
-
-.button-div {
-	width: 50%;
-	margin: 0 auto;
-}
-
-#button-aboutme {
-	width: 100%;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 10px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-
-
-
-.boxtext-cv {
-	margin-bottom: 70px; 
-}
-
-.text-textarea {
-	font-size: 1em;
-	line-height: 1.5em;
-	height: 50px;
-	width: 88%;
-	margin-top: -10px;
-	margin-bottom: -15px;
-}
-
-.button-cv {
-    width: 88%;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 25px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-.delete-cv {
-	background-color: red;
-}
-
-
-.no_editable {
-	text-align: center;
-	font-size: 3em;
-}
-
-.no_editable_section {
-	background-color: gray;
-}
