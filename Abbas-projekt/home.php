@@ -9,7 +9,7 @@
             <img id="mountain" src="img/berg.jpg" alt="banner">
             <?php 
                 $query = "SELECT * FROM home";
-                $pages_result = mysqli_query($conn, $query);
+                $pages_result = mysqli_query($db, $query);
 
                 while($page = mysqli_fetch_assoc($pages_result)){
                     echo '

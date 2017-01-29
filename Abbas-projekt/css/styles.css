@@ -252,14 +252,6 @@ OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG OM MIG
 	display: inline-block;
 }
 
-.tap-hidden {
-	display: inline-block;
-}
-
-.tap-hidden>img {
-	display: none;
-}
-
 
 /*******************************************************************************
 PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO
@@ -274,7 +266,15 @@ PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO
 
 .portfolio-div {
 	display: inline-table;
-	width: 49.7%;
+	width: 47%;
+}
+
+.left-div {
+	float: left;
+}
+
+.right-div {
+	float: right;
 }
 
 .portfolio-img {
@@ -429,6 +429,33 @@ input:focus, textarea:focus {
 	color: #000;
 }
 
+/*******************************************************************************
+ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN ADMIN       
+*******************************************************************************/
+
+.admin-title {
+	text-align: center;
+	font-size: 1.8em;
+	border-bottom: 1px solid #000;
+	padding-bottom: 4px;
+}
+
+#admin-login {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+#input-login:focus {
+	background-color: initial;
+}
+
+
+#input-login, #admin-submit {
+	font-size: 14px;
+	border: 1px solid #000;
+}
+
 
 /*******************************************************************************
 FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER      
@@ -535,14 +562,6 @@ OM MIG
 		text-align: left;
 	}
 
-	/*.info-public>img {
-		display: none;
-	}
-
-	.tap-hidden>img {
-		display: inline-block;
-		margin: 0;
-	}*!
 
 /********************************
 PORTFOLIO
@@ -556,6 +575,10 @@ PORTFOLIO
 .portfolio-img {
 	display: block;
 	width: 100%; 
+}
+
+.left-div, .right-div {
+	float: none;
 }
 
 

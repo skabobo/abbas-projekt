@@ -9,24 +9,18 @@ var a = setInterval( ()=>{ getDaysAndHours("2018-01-15","#dday", "#dhour"); },10
 getDaysAndHours("2018-05-31","#dday2", "#dhour2");//Visar tiden direkt
 var b = setInterval( ()=>{ getDaysAndHours("2018-05-31","#dday2", "#dhour2"); },1000*60)
 
- //Upprepa rad 5-6 med en annan sluttid
-    function getDaysAndHours(target, days, hours)
-    {
-       var today=new Date();
-       var endDate=new Date(target);
-       var diff=(endDate-today)/1000;
-       diff=diff/3600; //timmar
-      var dagar=diff/24;// dagar
-     timmar=diff- parseInt(dagar)*24;
+//Upprepa rad 5-6 med en annan sluttid
+function getDaysAndHours(target, days, hours) {
+  var today=new Date();
+  var endDate=new Date(target);
+  var diff=(endDate-today)/1000;
+  diff=diff/3600; //timmar
+  var dagar=diff/24;// dagar
+  timmar=diff- parseInt(dagar)*24;
 
-         if(days<=0 && hours<=0)  {
-      clearInterval(a); //Stoppa timern
-        document.getElementById("on-lia").innerHTML = "I'm on my LIA!";
-    }
-
-    $(days).html(parseInt(dagar));
-    $(hours).html(parseInt(timmar));
-    }
+  $(days).html(parseInt(dagar));
+  $(hours).html(parseInt(timmar));
+}
 
 /*(function start() {
 	v = setInterval(mytimer, 1); //för att timern ska köras direkt.

@@ -62,7 +62,7 @@
 		<br />
 		<br />
 
-		<a href="javascript:reset()"><input type="button" style="cursor:pointer; margin-left: 10px; font-size:18px;" value="Nytt spel"></a>
+		<a href="javascript:reset()"><input type="button" class="letters_input" value="Nytt spel"></a>
 
 	</section>
 	<script type="text/javascript" src="js/hangman.js"></script>
