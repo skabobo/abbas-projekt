@@ -272,16 +272,15 @@ PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO
 	padding-bottom: 4px;
 }
 
-.bajs {
+.portfolio-div {
 	display: inline-table;
 	width: 49.7%;
 }
 
-.portfolio-div {
+.portfolio-img {
 	display: inline-table;
 	width: 100%; 
 	height: 280px; 
-	background-color: blue;
 }
 
 
@@ -549,12 +548,12 @@ OM MIG
 PORTFOLIO
 *********************************/
 
-.bajs {
+.portfolio-div {
 	display: block;
 	width: 100%;
 }
 
-.portfolio-div {
+.portfolio-img {
 	display: block;
 	width: 100%; 
 }

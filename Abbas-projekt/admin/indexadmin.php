@@ -3,8 +3,8 @@
     session_start();  
 
     if( !isset($_SESSION['admin']) ){
-       header("Location: ../index.php?page=admin"); // kod för att inte loggas in i adminsidan när man skriver URL i adressfältet utan kod. 
-    }
+        header("Location: ../index.php?page=admin"); // kod för att inte loggas in i adminsidan när man skriver URL i adressfältet utan kod. 
+     }
 ?>
 
 

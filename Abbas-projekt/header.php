@@ -26,6 +26,7 @@
 <!--############### HEADER SLUT ##############-->
 
 <script type="text/javascript">
+	//Dynamisknavigation
 	$(document).ready(function($){
 		var path = window.location.search;
 
