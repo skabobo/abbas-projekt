@@ -4,7 +4,7 @@ include('../connect.php');
 
 
 /********************************************************
-Kod för att uppdatera befintlig text i CV:et
+Kod för att uppdatera befintlig text i CV:et samt att radera.
 ********************************************************/ 
 
 if(isset($_POST["id"])) {
@@ -25,10 +25,7 @@ if(isset($_POST["id2"])) {
 	mysqli_query($db, $query);   
 }
 
-if(isset($_POST["id2"])) {
-	$new_heading_delete = mysqli_real_escape_string($db, $_POST['cv-heading']);
-	$new_year_delete = mysqli_real_escape_string($db, $_POST['cv-year']);
-	$new_text_delete = mysqli_real_escape_string($db, $_POST['cv-text']);
+if(isset($_POST["id2"]) && isset($_POST["id2_delete"])) {
 	$id2_delete = mysqli_real_escape_string($db, $_POST['id2']);
 	$query = "DELETE FROM education_table WHERE id = $id2_delete";
 	mysqli_query($db, $query);
@@ -46,10 +43,7 @@ if(isset($_POST["id3"])) {
 	mysqli_query($db, $query);   
 }
 
-if(isset($_POST["id3"])) {
-	$new_heading2_delete = mysqli_real_escape_string($db, $_POST['cv-heading2']);
-	$new_year2_delete = mysqli_real_escape_string($db, $_POST['cv-year2']);
-	$new_text2_delete = mysqli_real_escape_string($db, $_POST['cv-text2']);
+if(isset($_POST["id3"]) && isset($_POST["id3_delete"])) {
 	$id3_delete = mysqli_real_escape_string($db, $_POST['id3']);
 	$query = "DELETE FROM job_table WHERE id = $id3_delete";
 	mysqli_query($db, $query);   

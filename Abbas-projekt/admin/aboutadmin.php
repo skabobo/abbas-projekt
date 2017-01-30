@@ -55,7 +55,7 @@ include('about-textadmin.php');
 									<textarea class="text-textarea" name="cv-text">'.$page['page_content'].'</textarea>
 									<input type="hidden" name="id2" value="'.$page['id'].'">
 			    					<div class="button-div"><button class="button-cv" type="submit" name="update">Spara</button></div>
-			    					<div class="button-div"><button onclick="return deleletconfig()" class="button-cv delete-cv" type="submit">Radera</button></div>
+			    					<div class="button-div"><button name="id2_delete" onclick="return deleletconfig()" class="button-cv delete-cv" type="submit">Radera</button></div>
 								</form>
 							</div>
 							';
@@ -99,7 +99,7 @@ include('about-textadmin.php');
 									<textarea class="text-textarea" name="cv-text2">'.$page['page_content'].'</textarea>
 									<input type="hidden" name="id3" value="'.$page['id'].'">
 			    					<div class="button-div"><button class="button-cv" type="submit" name="update">Spara</button></div>
-			    					<div class="button-div"><button onclick="return deleletconfig()" class="button-cv delete-cv" type="submit">Radera</button></div>
+			    					<div class="button-div"><button name="id3_delete" onclick="return deleletconfig()" class="button-cv delete-cv" type="submit">Radera</button></div>
 								</form>
 							</div>
 							';
