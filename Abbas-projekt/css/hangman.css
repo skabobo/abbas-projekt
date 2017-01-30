@@ -2,6 +2,12 @@ section {
 	text-align: center;
 }
 
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
 h2 {
 	font-size:18px;	
 }
@@ -16,4 +22,8 @@ h2 {
 	cursor: pointer; 
 	margin-left: 10px; 
 	font-size: 18px
+}
+
+.letters_input:hover {
+	background-color: #ff4c4c;
 }

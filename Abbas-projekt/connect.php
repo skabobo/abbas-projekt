@@ -1,7 +1,8 @@
 <?php 
 
 // Create connection
-$db = mysqli_connect("localhost", "root", "", "abbashodroj");
+//$db = mysqli_connect("localhost", "root", "", "abbashodroj");
+$db = mysqli_connect("abbashodroj-219305.mysql.binero.se", "219305_im16622", "hodroj13", "219305-abbashodroj");
 
 mysqli_query($db, "SET NAMES utf8");
 
