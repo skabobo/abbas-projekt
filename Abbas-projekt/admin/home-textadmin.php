@@ -4,7 +4,7 @@ include('../connect.php');
 
 
 /********************************************************
-Kod för att uppdatera befintlig text i CV:et
+Kod för att uppdatera befintlig text på hem 
 ********************************************************/ 
 
 if(isset($_POST["id"])) {

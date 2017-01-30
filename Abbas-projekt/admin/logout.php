@@ -1,7 +1,7 @@
 <?php
 session_start();
-session_destroy(); // Destroying All Sessions
+session_destroy(); // Förstöra alla sessions 
 
-header("Location: ../index.php?page=admin"); // Redirecting To Home Page
+header("Location: ../index.php?page=admin"); // omdirigera till admin-inloggning
 
 ?>

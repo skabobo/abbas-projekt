@@ -1,6 +1,6 @@
 jQuery.konami = function(fn, code) {
     // ↑ ↑ ↓ ↓ ← → ← → 38, 38, 40, 40, 37, 39, 37, 39
-    // A B B A S 
+    // A B B A S = 65, 66, 66, 65, 83 
     code = code || [65, 66, 66, 65, 83];
     var i = 0;
 
